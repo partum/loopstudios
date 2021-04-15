@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./images/logo.svg";
+import "./App.css";
+import "./style.css";
 
 function App() {
+  const nav = [
+    { id: 1, text: "About", href: "#" },
+    { id: 2, text: "Careers", href: "#" },
+    { id: 3, text: "Events", href: "#" },
+    { id: 4, text: "Products", href: "#" },
+    { id: 5, text: "Support", href: "#" }
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
+    <header>
+      <nav>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <NavLinks nav={nav} />
+      </nav>
+      <h1>Imersive Experiences That Deliver</h1>
+    </header>
   );
 }
 
+function NavLinks(props) {
+  return (
+    <span>
+      {props.nav.map(link => (
+        <a key={link.id} href={link.href}>
+          {link.text}
+        </a>
+      ))}
+    </span>
+  );
+}
 export default App;
