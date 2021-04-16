@@ -1,3 +1,8 @@
 .App-logo {
   animation-duration: 0ms;
 }
+header {
+  background-image: url("./images/desktop/image-hero.jpg");
+  width: 100vw;
+  height: 80vh;
+}
