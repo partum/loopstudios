@@ -14,6 +14,7 @@ header {
   padding: 59px 163px;
   box-sizing: border-box;
   overflow: hidden;
+  margin-bottom: 161px;
 }
 
 .App-logo {
@@ -50,4 +51,32 @@ h1 {
   display: flex;
   align-items: center;
   margin-top: 130px;
+}
+.leader {
+  padding: 0px 164px;
+  box-sizing: border-box;
+  height: 498px;
+}
+.leader article {
+  background-color: white;
+  width: 629px;
+  height: 319px;
+  box-sizing: border-box;
+  padding: 95px 0px 0px 95px;
+  right: 164px;
+  position: absolute;
+  top: 991px;
+}
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: 42px;
+  font-weight: 300;
+}
+p {
+  margin: 0;
+  font-family: "Alata", sans-serif;
+  color: gray;
 }
