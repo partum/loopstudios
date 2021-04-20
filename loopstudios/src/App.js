@@ -96,21 +96,23 @@ function Creations() {
     { id: 8, title: "Make it fisheye", pic: fisheye }
   ];
   return (
-    <div>
+    <div className="ourCreations">
       <h2>Our creations</h2>
-      <MyButton foo="See all" />
-      {projects.map(tile => (
-        <article key={tile.id}>
-          <img src={tile.pic} className="tile" />
-          <h3>{tile.title}</h3>
-        </article>
-      ))}
+      <MyButton txt="See all" />
+      <div className="flex-container">
+        {projects.map(tile => (
+          <article key={tile.id}>
+            <img src={tile.pic} className="tile" />
+            <h3>{tile.title}</h3>
+          </article>
+        ))}
+      </div>
     </div>
   );
 }
 
 function MyButton(props) {
-  return <button>{props.foo}</button>;
+  return <button>{props.txt}</button>;
 }
 
 function Footer() {
@@ -124,8 +126,8 @@ function Footer() {
     <footer>
       <img src={logo} className="App-logo" alt="logo" />
       {social.map(icon => (
-        <a href="#" key={social.id}>
-          <img src={logo.pic} className="social-icon" alt={logo.title} />
+        <a href="#" key={icon.id}>
+          <img src={icon.pic} className="social-icon" alt={icon.title} />
         </a>
       ))}
       <NavLinks />

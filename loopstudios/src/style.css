@@ -74,9 +74,97 @@ h2 {
   margin: 0;
   margin-bottom: 42px;
   font-weight: 300;
+  display: inline;
 }
 p {
   margin: 0;
   font-family: "Alata", sans-serif;
   color: gray;
+}
+.ourCreations {
+  padding: 0 163px;
+  margin-top: 179px;
+}
+.ourCreations button {
+  float: right;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  height: 41px;
+  width: 157px;
+  border: 1px solid black;
+  background-color: white;
+  font-weight: 300;
+}
+.flex-container {
+  display: flex;
+  margin-top: 87px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+article {
+  width: 255px;
+  height: 448px;
+  padding-bottom: 31px;
+}
+article img {
+  z-index: 0;
+}
+h3 {
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  color: red;
+  font-size: 30px;
+  margin: 0;
+  width: 255px;
+  height: 448px;
+  padding: 41px;
+  z-index: 50;
+  box-sizing: border-box;
+  position: relative;
+  top: -448px;
+}
+/* .flex-container article {
+  padding-left: 28px;
+  padding-bottom: 28px;
+}
+.flex-container:first-child {
+  padding-left: 0px;
+} */
+footer {
+  height: 157px;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  margin-top: 152px;
+  padding: 43px 163px;
+}
+footer .App-logo {
+  width: 145px;
+  height: auto;
+  display: block;
+  position: relative;
+  float: left;
+}
+footer a {
+  padding-left: 14px;
+  position: relative;
+  float: right;
+}
+footer span {
+  display: block;
+  float: left;
+}
+footer span a {
+  color: white;
+  text-decoration: none;
+  font-family: "Alata", sans-serif;
+  padding-right: 31px;
+  padding-left: 0px;
+}
+footer span a:hover {
+  text-decoration: underline;
+}
+footer p {
+  position: relative;
+  float: right;
 }
