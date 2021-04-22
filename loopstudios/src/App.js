@@ -100,12 +100,14 @@ function Creations() {
       <h2>Our creations</h2>
       <MyButton txt="See all" />
       <div className="flex-container">
-        {projects.map(tile => (
-          <article key={tile.id}>
-            <img src={tile.pic} className="tile" />
-            <h3>{tile.title}</h3>
-          </article>
-        ))}
+        <div className="grid-container">
+          {projects.map(tile => (
+            <article key={tile.id}>
+              <img src={tile.pic} className="tile" />
+              <h3>{tile.title}</h3>
+            </article>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -124,14 +126,18 @@ function Footer() {
   ];
   return (
     <footer>
-      <img src={logo} className="App-logo" alt="logo" />
-      {social.map(icon => (
-        <a href="#" key={icon.id}>
-          <img src={icon.pic} className="social-icon" alt={icon.title} />
-        </a>
-      ))}
-      <NavLinks />
-      <p>© 2021 Loopstudios. All rights reserved.</p>
+      <div>
+        <img src={logo} className="App-logo" alt="logo" />
+        {social.map(icon => (
+          <a href="#" key={icon.id}>
+            <img src={icon.pic} className="social-icon" alt={icon.title} />
+          </a>
+        ))}
+      </div>
+      <div>
+        <NavLinks />
+        <p>© 2021 Loopstudios. All rights reserved.</p>
+      </div>
     </footer>
   );
 }
