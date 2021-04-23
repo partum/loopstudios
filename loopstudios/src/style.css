@@ -95,6 +95,11 @@ p {
   background-color: white;
   font-weight: 300;
 }
+button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
 .flex-container {
   display: flex;
   justify-content: center;
@@ -179,4 +184,25 @@ footer div {
   height: 50px;
 }
 
-/*add break point 1174 or smaller to make 3 columns*/
+/*these break points change the layout of the portfolio grid*/
+@media only screen and (max-width: 1174px) {
+  .grid-container {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 255px 255px 255px;
+  }
+}
+@media only screen and (max-width: 889px) {
+  .grid-container {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 255px 255px;
+  }
+}
+@media only screen and (max-width: 603px) {
+  .grid-container {
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 255px;
+  }
+}
+/*this is the start of the mobile version*/
+@media only screen and (max-width: 375px) {
+}
