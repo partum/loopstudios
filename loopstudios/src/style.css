@@ -102,18 +102,30 @@ button:hover {
   display: flex;
   justify-content: center;
 }
-article {
+.grid-container article {
   width: 255px;
   height: 448px;
+  color: white;
   /* margin-bottom: 31px; */
 }
 article img {
   z-index: 0;
 }
+.grid-container article:hover::before {
+  position: absolute;
+  content: " ";
+  /* top: 90px;
+  left: 0; */
+  width: 257px;
+  height: 450px;
+  display: block;
+  z-index: 0;
+  background-color: rgba(224, 209, 182, 0.774);
+}
 h3 {
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
-  color: white;
+
   font-size: 30px;
   margin: 0;
   width: 170px;
@@ -122,6 +134,9 @@ h3 {
   position: relative;
   top: -141px;
   font-weight: 300;
+}
+.grid-container article:hover {
+  color: black;
 }
 article:nth-child(4) h3 {
   width: 50px;
@@ -206,3 +221,5 @@ footer div {
 /*this is the start of the mobile version*/
 @media only screen and (max-width: 375px) {
 }
+
+/*FEF7F1*/
