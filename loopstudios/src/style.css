@@ -191,6 +191,26 @@ span a:hover::after {
   border: 1px solid white;
 }
 
+footer a:hover::after {
+  content: "";
+  position: absolute;
+  /* left: 48px;
+  right: 15px; */
+  left: 20%;
+  right: 55%;
+  bottom: -12px;
+  border: 1px solid white;
+}
+.social-icon:hover::after {
+  content: "";
+  position: absolute;
+  /* left: 48px;
+  right: 15px; */
+  left: 35%;
+  right: 5%;
+  bottom: -12px;
+  border: 1px solid white;
+}
 footer p {
   position: relative;
   float: right;

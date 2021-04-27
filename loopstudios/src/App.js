@@ -129,8 +129,8 @@ function Footer() {
       <div>
         <img src={logo} className="App-logo" alt="logo" />
         {social.map(icon => (
-          <a href="#" key={icon.id}>
-            <img src={icon.pic} className="social-icon" alt={icon.title} />
+          <a href="#" key={icon.id} className="social-icon">
+            <img src={icon.pic} alt={icon.title} />
           </a>
         ))}
       </div>
