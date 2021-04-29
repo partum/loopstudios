@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import logo from "./images/logo.svg";
 import vrGuy from "./images/desktop/image-interactive.jpg";
 import curiosity from "./images/desktop/image-curiosity.jpg";
@@ -12,6 +13,8 @@ import facebook from "./images/icon-facebook.svg";
 import twitter from "./images/icon-twitter.svg";
 import pinterest from "./images/icon-pinterest.svg";
 import instagram from "./images/icon-instagram.svg";
+import menu from "./images/icon-hamburger.svg";
+import close from "./images/icon-close.svg";
 import "./App.css";
 import "./style.css";
 
@@ -19,12 +22,17 @@ function App() {
   return (
     <div id="main-content">
       <Header />
+      <Menu />
       <Leader />
       <Creations />
       <Footer />
       <div className="attribution">
         Challenge by{" "}
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noreferrer"
+        >
           Frontend Mentor
         </a>
         . Coded by{" "}
@@ -35,10 +43,15 @@ function App() {
 }
 
 function Header() {
+  // const [open, setOpen] = useState(false);
+  //use with setOpen(true)
   return (
     <header>
       <nav>
         <img src={logo} className="App-logo" alt="logo" />
+        <button onClick={null} className="hamburger">
+          <img src={menu} alt="menu" />
+        </button>
         <NavLinks />
       </nav>
       <div id="title">
@@ -103,7 +116,7 @@ function Creations() {
         <div className="grid-container">
           {projects.map(tile => (
             <article key={tile.id}>
-              <img src={tile.pic} className="tile" />
+              <img src={tile.pic} className="tile" alt="" />
               <h3>{tile.title}</h3>
             </article>
           ))}
@@ -139,6 +152,22 @@ function Footer() {
         <p>© 2021 Loopstudios. All rights reserved.</p>
       </div>
     </footer>
+  );
+}
+
+const menuComponent = React.createRef();
+function Menu() {
+  // if (!open) {
+  //   return null;
+  // }
+
+  return (
+    <div id="menu">
+      <button onClick={null} className="hamburger">
+        <img src={close} alt="close" />
+      </button>
+      <NavLinks />
+    </div>
   );
 }
 
