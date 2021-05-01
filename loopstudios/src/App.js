@@ -19,10 +19,16 @@ import "./App.css";
 import "./style.css";
 
 function App() {
+  //const [open, setOpen] = useState(false);
+  const [open, setOpen] = React.useState(false);
+  const handleClick = () => {
+    console.log("test");
+    setOpen(!open);
+  };
   return (
     <div id="main-content">
-      <Header />
-      <Menu />
+      <Header handleClick={handleClick} />
+      <Menu handleClick={handleClick} open={open} />
       <Leader />
       <Creations />
       <Footer />
@@ -42,14 +48,12 @@ function App() {
   );
 }
 
-function Header() {
-  // const [open, setOpen] = useState(false);
-  //use with setOpen(true)
+function Header({ handleClick, test }) {
   return (
     <header>
       <nav>
         <img src={logo} className="App-logo" alt="logo" />
-        <button onClick={null} className="hamburger">
+        <button onClick={handleClick} className="hamburger">
           <img src={menu} alt="menu" />
         </button>
         <NavLinks />
@@ -155,15 +159,15 @@ function Footer() {
   );
 }
 
-const menuComponent = React.createRef();
-function Menu() {
-  // if (!open) {
-  //   return null;
-  // }
+function Menu({ handleClick, open }) {
+  if (open === false) {
+    return null;
+  }
 
+  console.log(open);
   return (
     <div id="menu">
-      <button onClick={null} className="hamburger">
+      <button onClick={handleClick} className="hamburger">
         <img src={close} alt="close" />
       </button>
       <NavLinks />
