@@ -274,58 +274,45 @@ footer div {
     overflow: auto;
     /* display: none; */
   }
-  /*bookmark*/
   h1 {
-    color: white;
-    font-family: "Josefin Sans", sans-serif;
-    text-transform: uppercase;
     font-size: 38px;
-    margin: 0px;
-    font-weight: 300;
   }
   #title {
-    border: 2px solid white;
     width: 329px;
     height: 198px;
     padding: 28px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    margin-top: 130px;
+    margin-top: 158px;
   }
   .leader {
-    padding: 0px 11vw;
-    box-sizing: border-box;
-    height: 498px;
+    padding: 0px 22px;
+    height: 529px;
+  }
+  .leader img {
+    width: 326px;
+    height: 223px;
   }
   .leader article {
     background-color: white;
-    width: 629px;
-    height: 319px;
+    width: 326px;
+    height: 301px;
     box-sizing: border-box;
-    padding: 95px 0px 0px 95px;
-    right: 11vw;
-    position: absolute;
-    top: 991px;
+    padding: 44px 24px 0px 24px;
+    position: static;
+    text-align: center;
   }
   h2 {
-    font-family: "Josefin Sans", sans-serif;
-    text-transform: uppercase;
-    font-size: 40px;
-    margin: 0;
-    margin-bottom: 42px;
-    font-weight: 300;
-    display: inline;
+    font-size: 34px;
   }
   p {
-    margin: 0;
-    font-family: "Alata", sans-serif;
-    color: gray;
+    margin-top: 27px;
+    line-height: 25px;
+    font-size: 15px;
   }
   .ourCreations {
-    padding: 0 11vw;
-    margin-top: 179px;
+    margin-top: 113px;
+    margin-bottom: 52px;
   }
+  /*bookmark*/
   .ourCreations button {
     float: right;
     text-transform: uppercase;

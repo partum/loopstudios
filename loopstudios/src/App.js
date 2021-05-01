@@ -15,11 +15,19 @@ import pinterest from "./images/icon-pinterest.svg";
 import instagram from "./images/icon-instagram.svg";
 import menu from "./images/icon-hamburger.svg";
 import close from "./images/icon-close.svg";
+import { useMediaQuery } from "react-responsive";
+import mobile_curiosity from "./images/mobile/image-curiosity.jpg";
+import mobile_deep from "./images/mobile/image-deep-earth.jpg";
+import mobile_fisheye from "./images/mobile/image-fisheye.jpg";
+import mobile_above from "./images/mobile/image-from-above.jpg";
+import mobile_grid from "./images/mobile/image-grid.jpg";
+import mobile_night from "./images/mobile/image-night-arcade.jpg";
+import mobile_pocket from "./images/mobile/image-pocket-borealis.jpg";
+import mobile_soccer from "./images/mobile/image-soccer-team.jpg";
 import "./App.css";
 import "./style.css";
 
 function App() {
-  //const [open, setOpen] = useState(false);
   const [open, setOpen] = React.useState(false);
   const handleClick = () => {
     console.log("test");
@@ -101,24 +109,41 @@ function Leader() {
   );
 }
 
+const PictureArray = () => {
+  const mobile = useMediaQuery({ query: "(max-width: 375px)" });
+  return mobile ? mobile_projects : projects;
+};
+
+const projects = [
+  { id: 1, title: "Deep earth", pic: deep },
+  { id: 2, title: "Night arcade", pic: night },
+  { id: 3, title: "Soccer team VR", pic: soccer },
+  { id: 4, title: "The grid", pic: grid },
+  { id: 5, title: "From up above VR", pic: above },
+  { id: 6, title: "Pocket borealis", pic: pocket },
+  { id: 7, title: "The curiosity", pic: curiosity },
+  { id: 8, title: "Make it fisheye", pic: fisheye }
+];
+
+const mobile_projects = [
+  { id: 1, title: "Deep earth", pic: mobile_deep },
+  { id: 2, title: "Night arcade", pic: mobile_night },
+  { id: 3, title: "Soccer team VR", pic: mobile_soccer },
+  { id: 4, title: "The grid", pic: mobile_grid },
+  { id: 5, title: "From up above VR", pic: mobile_above },
+  { id: 6, title: "Pocket borealis", pic: mobile_pocket },
+  { id: 7, title: "The curiosity", pic: mobile_curiosity },
+  { id: 8, title: "Make it fisheye", pic: mobile_fisheye }
+];
+
 function Creations() {
-  const projects = [
-    { id: 1, title: "Deep earth", pic: deep },
-    { id: 2, title: "Night arcade", pic: night },
-    { id: 3, title: "Soccer team VR", pic: soccer },
-    { id: 4, title: "The grid", pic: grid },
-    { id: 5, title: "From up above VR", pic: above },
-    { id: 6, title: "Pocket borealis", pic: pocket },
-    { id: 7, title: "The curiosity", pic: curiosity },
-    { id: 8, title: "Make it fisheye", pic: fisheye }
-  ];
   return (
     <div className="ourCreations">
       <h2>Our creations</h2>
       <MyButton txt="See all" />
       <div className="flex-container">
         <div className="grid-container">
-          {projects.map(tile => (
+          {PictureArray().map(tile => (
             <article key={tile.id}>
               <img src={tile.pic} className="tile" alt="" />
               <h3>{tile.title}</h3>
