@@ -254,12 +254,13 @@ footer div {
     z-index: 50;
   }
   .hamburger {
-    float: right;
     border: none;
     background-color: rgba(0, 0, 0, 0);
     width: 25px;
     display: block;
     position: absolute;
+    right: 24px;
+    top: 42px;
   }
   nav span {
     display: none;
@@ -273,7 +274,7 @@ footer div {
     padding: 42px 5vw;
     position: absolute;
     overflow: auto;
-    /* display: none; */
+    box-sizing: border-box;
   }
   h1 {
     font-size: 38px;
@@ -341,7 +342,6 @@ footer div {
     content: " ";
     width: 326px;
     height: 120px;
-
     background-color: rgba(224, 209, 182, 0.774);
     background: rgb(0, 0, 0);
     background: linear-gradient(
