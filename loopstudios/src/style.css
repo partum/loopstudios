@@ -304,6 +304,7 @@ footer div {
   }
   h2 {
     font-size: 34px;
+    margin-bottom: 0px;
   }
   p {
     margin-top: 27px;
@@ -313,15 +314,16 @@ footer div {
   .ourCreations {
     margin-top: 113px;
     margin-bottom: 52px;
+    display: flex;
+    flex-direction: column;
   }
   .ourCreations button {
-    display: none;
+    position: relative;
+    top: 1185px;
+    margin: auto;
   }
   button:hover {
     background-color: rgba(0, 0, 0, 0);
-  }
-  .flex-container {
-    margin-top: 52px;
   }
   .grid-container article {
     width: 326px;
