@@ -367,36 +367,28 @@ footer div {
     display: block;
   }
   footer {
-    height: 157px;
-    background-color: black;
-    color: white;
-    box-sizing: border-box;
-    margin-top: 120px;
-    padding: 43px 11vw;
+    height: 470px;
+    margin-top: 152px;
+    padding: 51px;
+    position: relative;
   }
   footer .App-logo {
     width: 145px;
     height: auto;
     display: block;
     position: relative;
-    float: left;
+    float: none;
+    margin: auto;
   }
   footer a {
-    padding-left: 14px;
-    position: relative;
-    float: right;
+    float: none;
   }
   footer span {
     display: block;
     float: left;
   }
   footer span a {
-    color: white;
-    text-decoration: none;
-    font-family: "Alata", sans-serif;
-    padding-right: 31px;
-    padding-left: 0px;
-    position: relative;
+    margin-bottom: 26px;
   }
   span a:hover::after {
     content: "";
@@ -432,8 +424,24 @@ footer div {
   footer p {
     position: relative;
     float: right;
+    top: 40px;
   }
   footer div {
     height: 50px;
+  }
+  footer div span {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 300px;
+  }
+  footer div > a {
+    top: 290px;
+    position: relative;
   }
 }
